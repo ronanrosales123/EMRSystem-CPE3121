@@ -370,6 +370,7 @@ public class AdminSide extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenu3MouseClicked
 
+
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
         // TODO add your handling code here:
         //SIGN UP
@@ -378,6 +379,7 @@ public class AdminSide extends javax.swing.JFrame {
                     s.setVisible(true);
         
     }//GEN-LAST:event_jMenu4MouseClicked
+
     
     /**
      * @param args the command line arguments
