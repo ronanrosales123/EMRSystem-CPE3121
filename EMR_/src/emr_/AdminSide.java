@@ -232,6 +232,11 @@ public class AdminSide extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Search Patient");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -327,6 +332,16 @@ public class AdminSide extends javax.swing.JFrame {
         LoadData(); 
         clearFields();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        // TODO add your handling code here:
+        //TO EDIT PAGE
+        edit e = new edit();
+         this.hide();
+        e.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jMenu3MouseClicked
     
     /**
      * @param args the command line arguments
