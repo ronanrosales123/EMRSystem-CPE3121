@@ -32,7 +32,7 @@ public class AdminSide extends javax.swing.JFrame {
         initComponents();
         LoadData();
         autoID();
-        getContentPane().setBackground(new java.awt.Color(86, 75, 158));
+        getContentPane().setBackground(new java.awt.Color(27, 27, 27));
     }
     Connection con;
     PreparedStatement pst;
@@ -96,14 +96,11 @@ public class AdminSide extends javax.swing.JFrame {
         txtpatientage = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setBackground(new java.awt.Color(179, 179, 223));
-        jTable1.setForeground(new java.awt.Color(51, 51, 51));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -115,7 +112,7 @@ public class AdminSide extends javax.swing.JFrame {
                 "ID", "Date", "Name", "Age", "Sex", "Diagnosis"
             }
         ));
-        jTable1.setSelectionBackground(new java.awt.Color(86, 75, 158));
+        jTable1.setSelectionBackground(new java.awt.Color(255, 255, 255));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);
@@ -123,31 +120,33 @@ public class AdminSide extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.setBackground(new java.awt.Color(179, 179, 223));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Add Patient"));
-        jPanel1.setForeground(new java.awt.Color(179, 179, 223));
+        jPanel1.setBackground(new java.awt.Color(57, 57, 60));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Add Patient", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel1.setForeground(new java.awt.Color(57, 57, 60));
 
+        txtpatientid.setBackground(new java.awt.Color(204, 204, 204));
         txtpatientid.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtpatientid.setForeground(new java.awt.Color(204, 204, 204));
         txtpatientid.setText("______");
 
         jLabel2.setBackground(new java.awt.Color(179, 179, 223));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("Date Created");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("Age");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setText("Name");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setText("Sex");
 
-        r1.setForeground(new java.awt.Color(51, 51, 51));
+        r1.setForeground(new java.awt.Color(204, 204, 204));
         r1.setText("Male");
         r1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,18 +154,18 @@ public class AdminSide extends javax.swing.JFrame {
             }
         });
 
-        r2.setForeground(new java.awt.Color(51, 51, 51));
+        r2.setForeground(new java.awt.Color(204, 204, 204));
         r2.setText("Female");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("Diagnosis");
 
         txtdiagnosis.setColumns(20);
         txtdiagnosis.setRows(5);
         jScrollPane2.setViewportView(txtdiagnosis);
 
-        jButton1.setBackground(new java.awt.Color(86, 75, 158));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("Add");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +235,7 @@ public class AdminSide extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Log Out");
@@ -246,15 +245,6 @@ public class AdminSide extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jMenu1);
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Search Patient");
-        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu3MouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(jMenu3);
 
         jMenu4.setText("User Creation");
         jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -263,6 +253,14 @@ public class AdminSide extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jMenu4);
+
+        jMenu3.setText("Search Patient");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -280,7 +278,7 @@ public class AdminSide extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
@@ -370,7 +368,6 @@ public class AdminSide extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenu3MouseClicked
 
-
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
         // TODO add your handling code here:
         //SIGN UP
@@ -379,7 +376,6 @@ public class AdminSide extends javax.swing.JFrame {
                     s.setVisible(true);
         
     }//GEN-LAST:event_jMenu4MouseClicked
-
     
     /**
      * @param args the command line arguments
@@ -474,7 +470,6 @@ public void clearFields(){
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
